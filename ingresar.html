@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú Médico</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/fondo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+  }
+  .welcome-message {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .menu {
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu ul li {
+    margin-bottom: 10px;
+  }
+  .content {
+    width: 65%;
+    text-align: center;
+  }
+  .content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .exit-button {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bienvenido al Consultorio Médico</h1>
+</header>
+
+<div class="welcome-message">
+  <p>¡Bienvenido al consultorio médico Dan! Tu salud es nuestra prioridad. Estamos aquí para brindarte atención médica de calidad y cuidado personalizado. ¿En qué podemos ayudarte hoy? 
+  Estamos listos para ayudarte en tu camino hacia una vida más saludable y feliz.</p>
+</div>
+
+<div class="container">
+  <div class="menu">
+    <h2>Menú Médico</h2>
+    <ul>
+      <li><a href="file:///C:/Users/DANNER/Documents/DAnnerhtml/registrar%20cita%20medica.html">Registrar Citas Médicas</a></li>
+      <li><a href="file:///C:/Users/DANNER/Documents/DAnnerhtml/cancelar%20cita%20medica.html">Cancelar Cita Médica</a></li>
+      <li><a href="file:///C:/Users/DANNER/Documents/DAnnerhtml/registro%20de%20paciente.html">Registrar Paciente</a></li>
+      <li><a href="file:///C:/Users/DANNER/Documents/DAnnerhtml/registrar%20empleado.html">Registrar Empleado</a></li>  
+      <li><a href="file:///C:/Users/DANNER/Documents/DAnnerhtml/Mapa%20de%20navegacion.html">Mapa de navegacion</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <img src="img/medicine-concept-doctor-flat-style-600nw-1150232909.webp" alt="Imagen Médica">
+    <button class="exit-button" onclick="window.location.href='file:///C:/Users/DANNER/Documents/DAnnerhtml/INICIO%20SESIONS.HTML'">Salir</button>
+  </div>
+</div>
+
+</body>
+</html>

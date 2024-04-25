@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imagen a pantalla completa</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  img {
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .menu-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<button class="menu-button" onclick="window.location.href='file:///C:/Users/DANNER/Documents/DAnnerhtml/ingresar.html'">Ir a Menú Médico</button>
+<img src="c:\Users\DANNER\Desktop\Taller HTML daniel\3-Maquetacion_Pagina_HTML\img\mapa.png" alt="Imagen a pantalla completa">
+
+</body>
+</html>

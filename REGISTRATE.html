@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Usuario</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/fondo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+  .container {
+    width: 80%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); 
+  }
+  h2 {
+    text-align: center;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .success-message {
+    text-align: center;
+    color: green;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Registro de Usuario</h2>
+  <form action="procesar_registro.php" method="post">
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" id="username" name="username" placeholder="Ingrese su nombre de usuario.." required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña.." required>
+
+    <input type="submit" value="Registrarse">
+  </form>
+  <div class="success-message" style="display: none;">¡Datos guardados exitosamente!</div>
+  <div class="login-link">
+    <p>¿Ya tienes una cuenta? <a href="file:///C:/Users/DANNER/Documents/DAnnerhtml/INICIO%20SESIONS.HTML">Inicia sesión aquí</a></p>
+  </div>
+</div>
+
+<script>
+  // Simular guardado exitoso y mostrar el mensaje
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    document.querySelector('.success-message').style.display = 'block';
+    
+    setTimeout(function() {
+    
+		
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>

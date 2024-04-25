@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mostrar Datos del Paciente</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  .paciente-info {
+    margin-bottom: 20px;
+  }
+  .paciente-info label {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Datos del Paciente</h2>
+  
+  <div class="paciente-info">
+    <label>Nombre del Paciente:</label>
+    <span id="nombre_paciente"></span>
+  </div>
+
+  <div class="paciente-info">
+    <label>Tipo de Documento:</label>
+    <span id="tipo_documento"></span>
+  </div>
+
+  <div class="paciente-info">
+    <label>Número de Documento:</label>
+    <span id="numero_documento"></span>
+  </div>
+
+  <!-- Aquí puedes agregar más campos para mostrar los datos del paciente -->
+
+  <a href="file:///C:/Users/DANNER/Documents/DAnnerhtml/consultar%20cita.html">Volver a la consulta</a>
+</div>
+
+<script>
+  // Obtener parámetros de la URL
+  var params = new URLSearchParams(window.location.search);
+  var nombre = params.get('nombre');
+  var tipoDocumento = params.get('tipoDocumento');
+  var numeroDocumento = params.get('numeroDocumento');
+
+  // Mostrar los datos en la página
+  document.getElementById('nombre_paciente').textContent = nombre;
+  document.getElementById('tipo_documento').textContent = tipoDocumento;
+  document.getElementById('numero_documento').textContent = numeroDocumento;
+</script>
+
+</body>
+</html>

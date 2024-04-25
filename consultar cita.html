@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultar Cita</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  .form-section {
+    margin-bottom: 20px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Consultar Cita</h2>
+  
+  <div class="form-section">
+    <label for="nombre_paciente">Nombre del Paciente:</label>
+    <input type="text" id="nombre_paciente" name="nombre_paciente" required>
+
+    <label for="tipo_documento">Tipo de Documento:</label>
+    <select id="tipo_documento" name="tipo_documento" required>
+      <option value="DNI">DNI</option>
+      <option value="Carnet de Extranjería">Carnet de Extranjería</option>
+      <option value="Pasaporte">Pasaporte</option>
+      <option value="Cédula">Cédula</option>
+      <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+    </select>
+
+    <label for="numero_documento">Número de Documento:</label>
+    <input type="text" id="numero_documento" name="numero_documento" required>
+  </div>
+
+  <input type="submit" value="Consultar" onclick="consultarDatos()">
+</div>
+
+<script>
+    function consultarDatos() {
+        // Obtener los valores de los campos
+        var nombre = document.getElementById('nombre_paciente').value;
+        var tipoDocumento = document.getElementById('tipo_documento').value;
+        var numeroDocumento = document.getElementById('numero_documento').value;
+        
+        // Construir la URL con los parámetros de la consulta
+        var url = 'TU_DIRECTORIO/TU_PAGINA_MOSTRAR_DATOS.html' + 
+                  'nombre=' + encodeURIComponent(nombre) + '&' +
+                  'tipoDocumento=' + encodeURIComponent(tipoDocumento) + '&' +
+                  'numeroDocumento=' + encodeURIComponent(numeroDocumento);
+        
+        // Redirigir a la página que mostrará los datos
+        window.location.href = "file:///C:/Users/DANNER/Documents/DAnnerhtml/datos%20de%20paciente.html"
+    }
+    
+</script>
+
+</body>
+</html>
